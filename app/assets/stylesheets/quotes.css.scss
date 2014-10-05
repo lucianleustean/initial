@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,900");
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  @-moz-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @-webkit-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @-o-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @-ms-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    font-size: 15pt;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    line-height: 1.75em;
+
+    section.quotes {
+      height: 70%;
+      background-attachment: fixed;
+      background-color: #645862;
+      background-image: url("banner.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      #banner {
+        color: white;
+        padding: 8em 0;
+        text-align: center;
+
+        .inner {
+          -moz-animation: reveal-banner 1s 0.25s ease-in-out;
+          -webkit-animation: reveal-banner 1s 0.25s ease-in-out;
+          -o-animation: reveal-banner 1s 0.25s ease-in-out;
+          -ms-animation: reveal-banner 1s 0.25s ease-in-out;
+          animation: reveal-banner 1s 0.25s ease-in-out;
+          -moz-animation-fill-mode: forwards;
+          -webkit-animation-fill-mode: forwards;
+          -o-animation-fill-mode: forwards;
+          -ms-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+          background: rgba(52, 27, 43, 0.5);
+          color: white;
+          display: inline-block;
+          opacity: 0;
+          padding: 3em;
+          text-align: center;
+
+          h2 {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    article {
+      background: #f3f6fa;
+      padding: 30px;
+
+      #main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1400px;
+
+        header {
+          text-align: center;
+          padding: 30px;
+
+          span {
+            font-size: 3.5em;
+            opacity: 0.35;
+          }
+
+          h2 {
+            font-size: 1.5em;
+            letter-spacing: 0.1em;
+            color: #7c8081;
+            font-weight: 300;
+            line-height: 1.75em;
+            margin-bottom: 1em;
+            text-transform: uppercase;
+          }
+        }
+
+        section.add-quote{
+          textarea {
+            display: block;
+            width: 100%;
+            padding: 0.75em;
+            border: solid 2px rgba(185,186,187,0.25);
+            color: inherit;
+            border-radius: 0.5em;
+            min-height: 10em;
+            outline: none;
+            box-sizing: border-box;
+
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -o-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+
+            -moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
+
+            &:focus {
+              border-color: #9ac8e9;
+            }
+          }
+
+          .button {
+            background-color: #98c593;
+            border: 0;
+            border-radius: 3.5em;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            height: 3.5em;
+            letter-spacing: 0.1em;
+            line-height: 3.5em;
+            padding: 0 3em 0 3em;
+            margin-top: 30px;
+
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -o-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+
+            -moz-transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              background-color: #a8d5a3;
+            }
+
+            &:active {
+              background-color: #88b583;
+            }
+          }
+        }
+
+        section.show-quotes {
+          background-color: #83d3c9;
+          padding: 50px;
+          margin: 70px 0 30px 0;
+
+          p {
+            font-size: 23px;
+            color: #fff;
+            padding: 25px 130px;
+            line-height: 28px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }

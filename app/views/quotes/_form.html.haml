@@ -1,0 +1,3 @@
+= simple_form_for @quote, defaults: { :label => false } do |f|
+  = f.input :quote, as: :text, placeholder: 'Your new quote'
+  = f.button :submit, 'Upload'

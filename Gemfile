@@ -45,11 +45,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
+group :test, :development do
   gem 'capybara'
-  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'mongoid-rspec'
   gem 'factory_girl_rails', require: false
-  gem 'rspec-activemodel-mocks'
-  gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end

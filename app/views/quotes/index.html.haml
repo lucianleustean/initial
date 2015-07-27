@@ -10,8 +10,10 @@
     %header
       %span= fa_icon 'code'
       %h2 Add your own quotes
+
     %section.add-quote
       = render 'form'
+
     %section.show-quotes
-      - @quotes.order("created_at desc").each do |quote|
+      - @quotes.each do |quote|
         %p= quote.quote

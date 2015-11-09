@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use mongoDB as the database
-gem 'mongoid', '~> 4.0.2'
+gem 'mongoid',              '~> 5.0.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use HAML for templating
@@ -51,5 +51,6 @@ group :test, :development do
   gem 'mongoid-rspec'
   gem 'factory_girl_rails', require: false
   gem 'shoulda-matchers'
-  gem 'database_cleaner'
+  ## At the moment of update, the DatabaseCleaner gem wasn't ready for Mongoid5
+  gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
 end
